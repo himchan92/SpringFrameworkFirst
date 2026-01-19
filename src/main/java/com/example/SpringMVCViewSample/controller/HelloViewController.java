@@ -1,6 +1,7 @@
 package com.example.SpringMVCViewSample.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,5 +12,11 @@ public class HelloViewController {
     @GetMapping("view")
     public String helloView() {
         return "hello";
+    }
+
+    @GetMapping("model")
+    public String helloView(Model model) {
+        model.addAttribute("msg", "타임리프");
+        return "helloThymeleaf";
     }
 }
