@@ -8,6 +8,9 @@ spring:
     init:
       mode: always
 
+mybatis:
+  mapper-locations: classpath:**/*Mapper.xml
+
 logging:
   level:
     com:
